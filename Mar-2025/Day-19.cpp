@@ -75,6 +75,101 @@ public:
     }
 };
 
+class Solution
+{
+public:
+    int minKBitFlips(vector<int> &nums, int k)
+    {
+        int n = nums.size();
+        int totalFlips = 0, flipCount = 0;
+        vector<bool> isFliped(n, false);
+        // Step : 1
+        for (int i = 0; i < n; i++)
+        {
+            if (i >= k && isFliped[i - k] == true)
+            {
+                flipCount--;
+            }
+
+            if (flipCount % 2 == nums[i])
+            {
+                if (i + k > n)
+                    return -1;
+                totalFlips++;
+                flipCount++;
+                isFliped[i] = true;
+            }
+        }
+
+        return totalFlips;
+    }
+};
+
+class Solution
+{
+public:
+    int minKBitFlips(vector<int> &nums, int k)
+    {
+        int n = nums.size();
+        int totalFlips = 0, flipCount = 0;
+
+        // Step : 1
+        for (int i = 0; i < n; i++)
+        {
+            if (i >= k && nums[i - k] == 5)
+            {
+                flipCount--;
+            }
+
+            if (flipCount % 2 == nums[i])
+            {
+                if (i + k > n)
+                    return -1;
+                totalFlips++;
+                flipCount++;
+                nums[i] = 5;
+            }
+        }
+
+        return totalFlips;
+    }
+};
+
+class Solution
+{
+public:
+    int minKBitFlips(vector<int> &nums, int k)
+    {
+        int n = nums.size();
+        int totalFlips = 0, flipCount = 0;
+        deque<int> dq;
+        // Step : 1
+        for (int i = 0; i < n; i++)
+        {
+            if (i >= k)
+            {
+                flipCount -= dq.front();
+                dq.pop_front();
+            }
+
+            if (flipCount % 2 == nums[i])
+            {
+                if (i + k > n)
+                    return -1;
+                totalFlips++;
+                flipCount++;
+                dq.push_back(1);
+            }
+            else
+            {
+                dq.push_back(0);
+            }
+        }
+
+        return totalFlips;
+    }
+};
+
 int main()
 {
     return 0;
