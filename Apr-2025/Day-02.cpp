@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
+// https : // leetcode.com/problems/maximum-value-of-an-ordered-triplet-i/?envType=daily-question&envId=2025-04-02
 
-class Solution
+        class Solution
 {
 public:
     long long maximumTripletValue(vector<int> &nums)
