@@ -1,4 +1,9 @@
-#include <iostream>
+#include <iostream>  // For std::cout (if needed in main) and general I/O
+#include <vector>    // For std::vector
+#include <string>    // For std::string
+#include <numeric>   // For std::accumulate
+#include <limits>    // (Though you're not using anything from <limits> currently — optional)
+#include <algorithm> // For std::ranges::sort (C++20) and std::greater
 using namespace std;
 
 // https://leetcode.com/problems/minimum-equal-sum-of-two-arrays-after-replacing-zeros/description/?envType=daily-question&envId=2025-05-10
