@@ -1,2 +1,5 @@
-.vscode
-.vscode/settings.json
+# Ignore the .vscode folder
+.vscode/
+
+# Ignore macOS system file
+.DS_Store
