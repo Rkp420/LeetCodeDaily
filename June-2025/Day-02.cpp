@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// https://leetcode.com/problems/candy/?envType=daily-question&envId=2025-06-02
+// https://leetcode.com/problems/candy/?envType=daily-question&envId=2025-06-02D
 
 class Solution
 {
